@@ -1,0 +1,54 @@
+@use 'styles' as styles;
+
+.Header {
+	margin-bottom: styles.spacing(xl);
+	color: styles.colors(primaryDark);
+
+	&--dark {
+		color: styles.colors(light);
+	}
+
+	&-content {
+		margin: 0 auto;
+		max-width: styles.$maxWidth;
+		padding: styles.spacing(xxl) 0;
+		color: styles.colors(light);
+		text-align: center;
+		color: inherit;
+	}
+
+	// &-hint {
+	// 	@include styles.gradients('all');
+	// }
+
+	&-memoji {
+		display: inline-block;
+		width: 200px;
+		margin: 0 auto;
+		border-radius: 50%;
+	}
+
+	&-copy-primary,
+	&-copy-secondary,
+	&-copy-tertiary {
+		text-align: center;
+		line-height: 1.5;
+		font-family: styles.$quicksand;
+		font-weight: normal;
+		margin-bottom: 0;
+	}
+
+	&-copy-primary {
+		@include styles.fontsizeHeadingThree();
+	}
+
+	&-copy-secondary {
+		@include styles.fontsizeHeadingOne();
+		margin-bottom: styles.spacing(s);
+	}
+
+	&-copy-tertiary {
+		@include styles.fontsizeNormal();
+		margin-bottom: styles.spacing(xl);
+	}
+}
